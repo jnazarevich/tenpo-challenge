@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "79ac8603-52f6-4281-978d-a7551f8aab9e",
+		"name": "Percentages Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve percentages ok",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/percentages?status=ok",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"percentages"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "ok"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "retrieve with status ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/percentages?status=ok",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"percentages"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ok"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{ \"percentageValue\" : 10.0 }"
+				}
+			]
+		},
+		{
+			"name": "Retrieve percentages error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "retrieve with status error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/percentages?status=error",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"percentages"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "error"
+								}
+							]
+						}
+					},
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{ \"errorDescription\" : \"Internal error\" }"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://fa24c969-4412-49d5-9e57-f509ddc6d9fc.mock.pstmn.io"
+		}
+	]
+}
