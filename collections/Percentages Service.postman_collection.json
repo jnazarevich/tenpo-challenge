@@ -79,7 +79,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "{{url}}/percentages?status=error",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"percentages"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "error"
+						}
+					]
+				}
 			},
 			"response": [
 				{

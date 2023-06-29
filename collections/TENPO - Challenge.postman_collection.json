@@ -43,7 +43,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{local}}/service-calls?size=1&page=3",
+					"raw": "{{local}}/service-calls?size=1&page=1",
 					"host": [
 						"{{local}}"
 					],
@@ -57,8 +57,26 @@
 						},
 						{
 							"key": "page",
-							"value": "3"
+							"value": "1"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/actuator/health",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"actuator",
+						"health"
 					]
 				}
 			},
