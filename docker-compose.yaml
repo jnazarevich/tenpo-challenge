@@ -17,11 +17,6 @@ services:
       - src/main/resources/application.properties
     ports:
       - 8080:8080
-#    networks:
-#      - 'database'
-##      - 'redis'
-#    ports:
-#      - '8080'
   db:
     image: postgres:latest
     container_name: db
@@ -29,18 +24,6 @@ services:
       - POSTGRES_DB=challengedb
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=challengedb_user
-#    networks:
-#      - 'database'
   redis:
     image: redis:latest
     container_name: redis
-#    ports:
-#      - '6379'
-#    networks:
-#      - 'redis'
-
-#networks:
-#  database:
-#    driver: 'bridge'
-#  redis:
-#    driver: 'bridge'
