@@ -37,12 +37,28 @@ El servicio dockerizado se encuentra alojado en Docker-Hub. Bajarse la imagen me
 docker pull juannazarevich/app-latest:latest
 ```
 
-Correr el servicio mediante docker-compose
+Correr el servicio mediante docker-compose, desde la carpeta raíz del proyecto.
 
 
 ```bash
-docker-compose up app
+docker-compose up --build
 ```
+
+Luego corroborar si el servicio está funcionando mediante el siguiente endpoint.
+
+```json
+método : GET
+url : {{url}}/actuator/health
+```
+
+Response
+
+```json
+{
+    "status": "UP"
+}
+```
+
 
 ## Configuración
 
